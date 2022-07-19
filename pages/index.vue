@@ -1,0 +1,99 @@
+<template>
+    <div>
+        <header class="container_home">
+           <h1 class="title_home">
+              TITLE FOR SITE
+            </h1>
+        </header>
+
+        <main class="main_header">
+              <div class="container_text">
+                <TextHome :title="titleone" :subtitle="subtitleone"/>
+              </div>
+              <div class="container_img">
+                  <ImgHome/>
+              </div>
+              <div class="box_footer">
+                     <v-icon class="icon_main">
+                      mdi-instagram
+                     </v-icon>
+                     <v-icon class="icon_main">
+                      mdi-facebook
+                     </v-icon>
+                     <v-icon class="icon_main">
+                      mdi-whatsapp
+                     </v-icon>
+                    <a href="#">
+                       <v-icon class="icon_main">
+                      mdi-github
+                     </v-icon>
+                    </a>
+              </div>
+        </main>
+
+    </div>
+</template>
+
+<script>
+export default {
+  name: 'IndexPage',
+
+    data() {
+      return {
+        titleone:"Somting one",
+        subtitleone:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem quisquam dolorem, error id, aliquam molestias hic est officiis aspernatur necessitatibus modi libero accusantium placeat ad quod in minima? Quia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa pariatur voluptate qui exercitationem! Sint tempore reprehenderit aspernatur dolor nihil possimus a consectetur nulla! Obcaecati, cupiditate eos illum eius asperiores fuga.",
+
+        titletow:"Title Tow:"
+
+      }
+    },
+
+}
+</script>
+<style lang="css">
+html{
+  scroll-behavior: smooth;
+}
+  .container_home{
+    min-height: 100vh;
+    background-image: url('@/static/image_logo/wallpaper1.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;align-items: center;
+  }
+  .title_home{
+    font-size: 3.8rem;
+    color: #fff;
+    filter: drop-shadow(0px 2px 20px black);
+    background-blend-mode: darken;
+    letter-spacing: 1.1rem;
+    font-weight: normal;
+    user-select: none;
+  }
+  .main_header{
+    min-height: 100vh;
+    background-image: url('@/static/image_logo/wallpaper2.jpg');
+  } 
+  .main_header img{
+    position: absolute;
+  }
+  .container_text{
+    padding: 8rem 10rem 4rem 10rem;
+  }
+  .container_img{
+    padding: 4rem 10rem;
+    margin: 0 auto;
+  }
+  .box_footer{
+    padding: 5rem 5rem;
+    width: 100%;
+    display: flex; justify-content: space-around; align-items: center;
+  }
+  .box_footer .icon_main{
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
