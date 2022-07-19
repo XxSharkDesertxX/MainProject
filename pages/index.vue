@@ -35,7 +35,6 @@
 <script>
 export default {
   name: 'IndexPage',
-
     data() {
       return {
         titleone:"Somting one",
@@ -45,6 +44,16 @@ export default {
 
       }
     },
+    head(){
+    return{
+      title:"Home Page",
+      meta:[{
+        hid:"Somting",
+        name:"name for site",
+        content:"The Home Pages"
+      }]
+    }
+  },
 
 }
 </script>

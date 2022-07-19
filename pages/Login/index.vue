@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <h1>page for Login</h1>
+    <div class="lgoin_user">
+        <LoginUser/>
+        <img src="@/static/image_logo/Logo2.png" alt="logologin">
     </div>
 </template>
 
@@ -10,6 +11,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="css">
+    .lgoin_user{
+        min-height: 90vh;
+        display: flex; justify-content: center; align-items: center;
+    }
 </style>

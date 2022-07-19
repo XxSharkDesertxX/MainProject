@@ -24,6 +24,16 @@ export default {
         return {
         }
     },
+    head(){
+        return{
+            title:"Content",
+            meta:[{
+                hid:"Content",
+                name:"Contantpage",
+                content:"The Content page"
+            }]
+        }
+    },
     computed:{
         ...mapState([
             'data'
