@@ -11,10 +11,10 @@
                 <nuxt-link to="/Content" class="nxt_link_header">Content</nuxt-link>
             </li>
             <li>
-                <nuxt-link to="/About" class="nxt_link_header">About</nuxt-link>
+                <nuxt-link to="Login" class="nxt_link_header">Login</nuxt-link>
             </li>
             <li>
-                <nuxt-link to="Login" class="nxt_link_header">Login</nuxt-link>
+                <nuxt-link to="/About" class="nxt_link_header">About</nuxt-link>
             </li>
         </ul>
 

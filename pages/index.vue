@@ -23,11 +23,9 @@
                      <v-icon class="icon_main">
                       mdi-whatsapp
                      </v-icon>
-                    <a href="#">
                        <v-icon class="icon_main">
                       mdi-github
                      </v-icon>
-                    </a>
               </div>
         </main>
 
@@ -88,12 +86,13 @@ html{
   }
   .box_footer{
     padding: 5rem 5rem;
-    width: 100%;
+    margin: 0 auto;
+    width: 50%;
     display: flex; justify-content: space-around; align-items: center;
   }
   .box_footer .icon_main{
     font-size: 5rem;
     color: #fff;
-    cursor: pointer;
+    cursor: pointer;  
   }
 </style>
