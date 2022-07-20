@@ -1,9 +1,15 @@
 <template>
     <div class="log_container">
-        <div v-if="!singup">
-            <div class="title_login">
+
+        <div class="alert_pas" v-if="checkPassword">
+            <p>Alert for passord .....</p>
+        </div>
+
+         <div class="title_login">
             <h3>Title Form Login</h3>
         </div>
+        
+        <div v-if="!singup">
             <div class="body_login">
                 <div class="body_login_item">
                     <v-icon>
@@ -33,16 +39,13 @@
         </div>
         
         <div v-if="singup">
-            <div v-if="singup">
-            <div class="title_login">
-            <h3>Title Form Login</h3>
-        </div>
+            <div>
             <div class="body_login">
                 <div class="body_login_item">
                     <v-icon>
                         mdi-account
                     </v-icon>
-                    <input type="text" placeholder="User Name" v-model="user">
+                    <input type="text" placeholder="User Name" v-model="username">
                 </div>
                 <div class="body_login_item">
                     <v-icon>
@@ -60,18 +63,21 @@
         </div>
         </div>
 
-            <div class="footer_login" @click="chagnelog">
-                <v-btn>
-                    {{singup ? "SingUp" : "Login"}}
+            <div class="footer_login">
+                <div>
+                    <v-btn @click="newUsers"> 
+                        {{singup ? "SingUp" : "Login"}}
+                    </v-btn>
+                </div>
+                <v-btn @click="chagnelog">
+                    {{singup ? 'Switch SingUP' : 'Switch Login'}}
                 </v-btn>
-                <v-btn>
-                    Switch Sing UP
-                </v-btn>
-                <v-btn>
-                    <v-icon type="button" @click="revereinfo">
+
+                    <div>
+                        <v-icon type="button" @click="revereinfo">
                           mdi-autorenew
-                    </v-icon>
-                </v-btn>
+                        </v-icon>
+                    </div>
             </div>
 
     </div>
@@ -88,8 +94,14 @@ export default {
             password:null,
             passwordtow:null,
             singup:false,
+            checkPassword:false
         }
     },
+    computed:{
+        ...mapState([
+            'user'
+        ]) ,
+    },  
     methods: {
         revereinfo(){
             this.username=null,
@@ -99,12 +111,30 @@ export default {
         },
         chagnelog(){
              return this.singup = !this.singup
+        },
+        ...mapActions([
+            'add'
+        ]),
+        newUsers(){
+           if (this.username) {
+            if (this.password == this.passwordtow) {
+                  const new_user ={
+                username:this.username,
+                email : this.email,
+                password : this.password,
+                id:this.user.length
+            }    
+            this.username=null,
+            this.email=null,
+            this.password=null,
+            this.passwordtow=null
+            this.add(new_user);
+            this.checkPassword = false
+            }else{
+                return this.checkPassword = true
+            }
+           }
         }
-    },
-    computed:{
-        ...mapState([
-            'user'
-        ]) ,
     },
 }
 </script>
@@ -136,5 +166,9 @@ export default {
         width: 60%;
         padding-top: 1rem;
         display: flex; justify-content: space-around; align-items: center;
+    }
+    .alert_pas{
+        margin-bottom: 1rem;
+        color:red;
     }
 </style>

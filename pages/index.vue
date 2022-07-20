@@ -88,6 +88,7 @@ html{
   }
   .container_text{
     padding: 8rem 10rem 4rem 10rem;
+    margin-bottom: 20vh;
   }
   .container_img{
     padding: 4rem 10rem;

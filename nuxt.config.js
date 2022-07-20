@@ -15,7 +15,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'https://cdn.freelogodesign.org/files/71a1d6d35e0e4ac88fa652dcd654c630/thumb/logo_200x200.png?v=637938993810000000' },
 
       { rel: 'preconnect',href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect',href: 'https://fonts.gstatic.com" crossorigin' },
@@ -27,6 +27,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/mainstyle.scss',
+
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -75,5 +77,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  transition:{
+    name:"fade" , 
+    mode:"out-in"
+  },
+
+  loading: {
+    color: 'blue',
+    height: '5px'
   }
-}
+
+};
