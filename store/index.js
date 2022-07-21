@@ -11,7 +11,11 @@ export default()=>{
 
         mutations:{
          adds(state,item){
-            state.user.push(item);
+            if (state.user[state.user.length -1].email !== item.email) {
+                state.user.push(item);
+            } else {
+                alert('user alredy is logine' );
+            }
          }
 
         },

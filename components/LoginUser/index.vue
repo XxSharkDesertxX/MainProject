@@ -33,7 +33,7 @@
                     <v-icon class="body_login_item_logo">
                         mdi-key
                     </v-icon>
-                    <input type="password" placeholder="User Password" v-model="passwordtow">
+                    <input type="password" placeholder="User Password" v-model="passwordtow" @keydown.enter="newUsers">
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@ export default {
             'add'
         ]),
         newUsers(){
-           if (this.username) {
+           if (this.username && this.email && this.password && this.passwordtow) {
             if (this.password == this.passwordtow) {
                   const new_user ={
                 username:this.username,
