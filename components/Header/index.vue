@@ -110,8 +110,8 @@ export default {
         transition: all .6s;
     }
     .nuxt-link-active{
-        border-bottom: 2px solid #000;
         transition: all .6s;
+        filter: drop-shadow(0px 6px 3px black);
     }
     
     .mnue_container_sml{

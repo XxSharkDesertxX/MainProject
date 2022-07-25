@@ -25,9 +25,13 @@ export default {
 
 <style lang="css">
     .content_item{
-        width: 100%;
+        width: 50%;
         height: 40vh;
         margin: 4rem 0;
+        margin-left: 5%;
+    }
+    .content_item:nth-child(even){
+        margin-left: 40%;
     }
     .img_content{
         width: 100%;
@@ -48,15 +52,9 @@ export default {
         font-weight: normal;
         font-size: 1.2rem;
     }
-    .img_content p{
-        width: 50%;
-    }
     .nuxt_link_item{
         text-decoration: none;
         color: #000;
         transition: all .6s;
-    }
-    .nuxt_link_item:hover{
-        border-bottom: 2px solid #000;
     }
 </style>

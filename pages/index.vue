@@ -10,8 +10,8 @@
               <div class="container_text">
                 <TextHome :title="titleone" :subtitle="subtitleone"/>
               </div>
-              <div class="container_img">
-                  <ImgHome/>
+              <div class="container_img"> 
+                  <Slider />
               </div>
               <div class="box_footer">
                      <v-icon class="icon_main">
@@ -33,8 +33,12 @@
 </template>
 
 <script>
+import Slider from '@/components/Slider'
 export default {
   name: 'IndexPage',
+  comments:{
+    Slider
+  },
     data() {
       return {
         titleone:"Somting one",
@@ -93,6 +97,7 @@ html{
   .container_img{
     padding: 4rem 10rem;
     margin: 0 auto;
+    background: rgba(255, 255, 255,.4);
   }
   .box_footer{
     padding: 5rem 5rem;
