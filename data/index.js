@@ -33,6 +33,13 @@ export default[
             src: `${require(`@/static/image_logo/5.jpg`)}`,
             id:4
 
+        },
+        {
+            title:"Title for six",
+            subtitle:"lLorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem aperiam voluptas velit quia qui rerum? Nemo magni sequi quidem pariatur eligendi amet illo labore maxime, impedit, facilis magnam delectus?",
+            src: `${require(`@/static/image_logo/wallpaper1.jpg`)}`,
+            id:5
+
         }
 
 ];

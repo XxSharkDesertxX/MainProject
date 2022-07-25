@@ -1,13 +1,10 @@
 <template>
     <div class="content_item">
-        <div class="img_content">
              <div class="discreption_item">    
-                <nuxt-link :to="`Content/${id}`" class="nuxt_link_item">
-                    <h4>{{title}}</h4>
+                    <nuxt-link :to="`Content/${id}`" class="nuxt_link_item">
+                    <img :src="img" alt="image">
                 </nuxt-link>
              </div>
-                <img :src="img" alt="">
-        </div>
     </div>
 </template>
 
@@ -25,36 +22,31 @@ export default {
 
 <style lang="css">
     .content_item{
-        width: 50%;
-        height: 40vh;
-        margin: 4rem 0;
-        margin-left: 5%;
-    }
-    .content_item:nth-child(even){
-        margin-left: 40%;
-    }
-    .img_content{
-        width: 100%;
-        height: 30vh;
-        display: flex; justify-content: center; align-items: center;
-        flex-direction: column;
-    }
-    .content_item .img_content img{
-        width: 100%; height: 100%;
-        object-fit: cover;
+        width: 20%;
+        height: 50vh;
+        display: flex; justify-content: center;
+        transition: all .6s;
     }
     .discreption_item{
-        width: 50%;
-        text-align: center;
+        width: 20%;
+        height: 100%;
+        transition: all .6s;
     }
-    .discreption_item h4{
-        margin: 1rem 0;
-        font-weight: normal;
-        font-size: 1.2rem;
+    .content_item:hover{
+        width: 100%;
+        transform: scale(1.1);
+    }
+    .content_item:hover .discreption_item{
+        width: 70%;
     }
     .nuxt_link_item{
-        text-decoration: none;
-        color: #000;
-        transition: all .6s;
+        width: 100%;
+        height: 100%;
+    }
+    .nuxt_link_item img{
+        width: 100%; height: 50vh;
+        object-fit: cover;
+        border-radius: .5rem;
+        overflow: hidden;
     }
 </style>

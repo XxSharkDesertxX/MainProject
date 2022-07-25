@@ -57,5 +57,9 @@ export default {
     }
     .container_item_content{
         width: 100%;
+        display: flex;
+        height: 50vh;
+        padding: 0 .5rem;
+        padding-left: 1rem;
     }
 </style>

@@ -2,7 +2,7 @@
     <div class="log_container">
 
         <div class="alert_pas" v-if="checkPassword">
-            <p>Alert for passord .....</p>
+            <p>Alert For Password .....</p>
         </div>
 
          <div class="title_login">
@@ -65,7 +65,7 @@
 
             <div class="footer_login">
                 <div>
-                    <v-btn @click="newUsers"> 
+                    <v-btn @click="newUsers" class="button_login"> 
                         {{singup ? "SingUp" : "Login"}}
                     </v-btn>
                 </div>
@@ -143,6 +143,10 @@ export default {
     .log_container{
         width: 70%;
         height: 50%;
+        transition: all .6s;
+    }
+    .log_container:hover{
+        filter: drop-shadow(1px 2px 10px black);
     }
     .title_login{
         margin-bottom: 1.5rem;
@@ -156,6 +160,9 @@ export default {
         margin: 1rem 0;
         display: flex; justify-content: center; align-items: center;
         width: 50%;
+        transition: all .3s .3s;
+        border-bottom: 1px solid transparent;
+        padding-bottom: .5rem;
     }
     .body_login_item input{
         border: none; outline: none;
@@ -169,6 +176,9 @@ export default {
     }
     .alert_pas{
         margin-bottom: 1rem;
-        color:red;
+        color:rgb(223, 35, 35);
+    }
+    .footer_login .button_login{
+        color: green;
     }
 </style>
