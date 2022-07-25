@@ -39,9 +39,6 @@ export default {
             'data'
         ])   
     },
-    created(){
-        console.log(this.data);
-    }
 }
 </script>
 

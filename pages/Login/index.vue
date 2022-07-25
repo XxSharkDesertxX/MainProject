@@ -7,7 +7,17 @@
 
 <script>
 export default {
-    name:"Login"
+    name:"Login",
+    head(){
+        return{
+            title:"Login",
+            meta:[{
+                hid:"somting for login",
+                name:"Login page",
+                content:"the content for login"
+            }]
+        }
+    }
 }
 </script>
 
