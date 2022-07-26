@@ -31,6 +31,7 @@ export default {
         width: 20%;
         height: 100%;
         transition: all .6s;
+        filter: drop-shadow(1px 2px 9px black);
     }
     .content_item:hover{
         width: 100%;
@@ -38,6 +39,8 @@ export default {
     }
     .content_item:hover .discreption_item{
         width: 70%;
+        filter: drop-shadow(0px 0px 0px white);
+
     }
     .nuxt_link_item{
         width: 100%;

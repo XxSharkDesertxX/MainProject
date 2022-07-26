@@ -45,15 +45,13 @@ export default {
 
 <style lang="css">
        .content{
-        padding-top: 10vh;
-        display: flex; justify-content: space-around; align-items: center;
+        display: flex; justify-content: center; align-items: center;
         flex-direction: column;
         min-height: 90vh;
-        background-image: url();
     }
     .content_title{
         font-weight: normal;
-        margin: 3rem 0 1rem 0;
+        margin: 3rem 0;
     }
     .container_item_content{
         width: 100%;
