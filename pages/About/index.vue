@@ -12,7 +12,7 @@
 import { mapState } from "vuex";
 export default {
     name:"About",
-
+  middleware:'log',
         head(){
         return{
             title:"About",

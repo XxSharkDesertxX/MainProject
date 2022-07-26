@@ -33,7 +33,8 @@
 </template>
 
 <script>
-import Slider from '@/components/Slider'
+import Slider from '@/components/Slider';
+
 export default {
   name: 'IndexPage',
   comments:{

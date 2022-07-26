@@ -20,6 +20,7 @@ import { mapState } from "vuex";
 
 export default {
     name:"Content",
+  middleware:'log',
     data() {
         return {
         }

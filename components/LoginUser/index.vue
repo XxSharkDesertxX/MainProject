@@ -107,7 +107,8 @@ export default {
             this.username=null,
             this.email=null,
             this.password=null,
-            this.passwordtow=null
+            this.passwordtow=null,
+            this.checkPassword = false
         },
         chagnelog(){
              return this.singup = !this.singup
@@ -122,7 +123,8 @@ export default {
                 username:this.username,
                 email : this.email,
                 password : this.password,
-                id:this.user.length
+                id:this.user.length,
+                middleware:true
             }    
             this.username=null,
             this.email=null,
@@ -130,6 +132,7 @@ export default {
             this.passwordtow=null
             this.add(new_user);
             this.checkPassword = false
+            alert('Wellcome ...');
             }else{
                 return this.checkPassword = true
             }
