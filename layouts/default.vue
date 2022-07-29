@@ -3,6 +3,7 @@
         <Header/>
             <div>
                 <Nuxt/>
+                <Lodaer v-if="loader"/>
             </div>
             <Footer/>
       </div>
@@ -13,9 +14,16 @@ export default {
   name: 'DefaultLayout',
   data () {
     return {
-
+      loader : true
     }
-  }
+  },
+
+  beforeMount() {
+    this.loader= true
+  },
+  mounted() {
+    this.loader = false
+  },
 }
 </script>
 

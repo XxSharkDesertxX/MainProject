@@ -133,6 +133,7 @@ export default {
             this.add(new_user);
             this.checkPassword = false
             alert('Wellcome ...');
+            
             }else{
                 return this.checkPassword = true
             }
