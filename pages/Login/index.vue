@@ -8,6 +8,7 @@
 <script>
 export default {
     name:"Login",
+    middleware:'admin',
     head(){
         return{
             title:"Login",
@@ -17,7 +18,7 @@ export default {
                 content:"the content for login"
             }]
         }
-    }
+    },
 }
 </script>
 

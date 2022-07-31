@@ -16,6 +16,9 @@ export default()=>{
             } else {
                 alert('user alredy is logine' );
             }
+         },
+         remove(state,item){
+            state.data.splice(item ,1);
          }
 
         },
@@ -23,7 +26,12 @@ export default()=>{
         actions:{
             add(context,item){
                 context.commit("adds" , item);
+            },
+
+            remove(context,item){
+                context.commit('remove',item);
             }
+
         },
 
         getters:{}

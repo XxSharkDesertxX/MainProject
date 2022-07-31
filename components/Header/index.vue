@@ -16,7 +16,7 @@
             </li>
             <li>
                 <nuxt-link to="/About" class="nxt_link_header">About</nuxt-link>
-            </li>
+            </li>   
         </ul>
 
 
@@ -42,6 +42,9 @@
             </li>
             <li>
                 <nuxt-link to="/About" class="nxt_link_header">About</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/Admin" class="nxt_link_header">Admin</nuxt-link>
             </li>
         </ul>
     </div>
