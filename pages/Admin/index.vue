@@ -7,23 +7,24 @@
         />
         <div class="back_home_admin">
             <v-btn>
-                <nuxt-link to="/">
-                    <v-icon>
+                <nuxt-link to="/" class="icon_post_adming">
+                    <v-icon >
                         mdi-home
                     </v-icon>
                 </nuxt-link>
             </v-btn>
 
              <v-btn>
-                <nuxt-link to="/Content">
-                    <v-icon>
-                        mdi-home
+                <nuxt-link to="/Content" class="icon_post_adming">
+                    <v-icon >
+                        mdi-view-week
                     </v-icon>
                 </nuxt-link>
             </v-btn>
-
-
         </div>
+
+            <AdminAddpost />
+            
     </div>
 </template>
 
@@ -52,5 +53,9 @@ export default {
     .back_home_admin{
         position: absolute;
         top: 1rem; right: 1rem;
+    }
+    .icon_post_adming{
+        text-decoration: none;
+        color: #000;
     }
 </style>

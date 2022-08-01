@@ -85,8 +85,8 @@ export default {
   },
 
   loading: {
-    color: 'blue',
-    height: '15px',
+    color: 'gray',
+    height: '5px',
   }
 
 };

@@ -26,5 +26,6 @@ export default {
     .lgoin_user{
         min-height: 90vh;
         display: flex; justify-content: center; align-items: center;
+        flex-wrap: wrap-reverse;
     }
 </style>

@@ -113,4 +113,30 @@ html{
     color: #fff;
     cursor: pointer;  
   }
+
+
+   @media screen and (max-width:700px) {
+      .container_home{
+        background-size: 130% 100%;
+      }
+      .title_home{
+        font-size: 2rem;
+      }
+      .main_header{
+        background-size: 180% 100%;
+      }
+      .container_text{
+        padding: 2rem 1rem;
+      }
+      .container_img{
+        padding: 0;
+      }
+      .box_footer .icon_main{
+        font-size: 4rem;
+        margin: 0 2rem;
+      }
+    }
+
+
+
 </style>

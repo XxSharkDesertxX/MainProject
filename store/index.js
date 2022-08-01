@@ -19,6 +19,9 @@ export default()=>{
          },
          remove(state,item){
             state.data.splice(item ,1);
+         },
+         addpost(state,item){
+            state.data.push(item);
          }
 
         },
@@ -30,6 +33,10 @@ export default()=>{
 
             remove(context,item){
                 context.commit('remove',item);
+            },
+
+            addpost(context,item){
+                context.commit('addpost',item);
             }
 
         },

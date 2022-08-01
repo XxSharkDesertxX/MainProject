@@ -20,3 +20,7 @@
     transform: translateX(20px);
     opacity: 0;
   }
+
+  html::-webkit-scrollbar{
+    display: none;
+  }

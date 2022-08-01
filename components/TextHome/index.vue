@@ -24,7 +24,6 @@ export default {
     .text_home{
         height: 25vh;
         position: relative;
-        border-bottom: 2px solid black;
         display: flex; justify-content: space-between;
         flex-direction: column;
         padding-bottom: 2rem;
