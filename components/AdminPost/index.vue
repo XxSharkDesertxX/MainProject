@@ -26,8 +26,14 @@ export default {
             'remove'
         ]),
         removeitem(){
-            console.log(this.id)
-            this.remove(this.id)
+           
+           let data= window.confirm('Are You Sure For Delet Post ...??')
+           
+            if (data) {
+                 this.remove(this.id)
+            } else {
+                return
+            }
         }
     },
 }

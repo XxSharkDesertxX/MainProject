@@ -89,4 +89,10 @@ export default {
         font-size: 4rem;
         filter: drop-shadow(1px 5px 10px #000);
     }
+
+    @media screen and (max-width:700px) {
+        .title_item_sigle{
+            width: 100%;
+        }
+    }
 </style>
