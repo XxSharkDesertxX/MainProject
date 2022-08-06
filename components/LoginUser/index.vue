@@ -21,7 +21,7 @@
                     <v-icon>
                         mdi-email
                     </v-icon>
-                    <input type="email" placeholder="User Emali" v-model="email">
+                    <input type="email" placeholder="User Emali"  inputmode="email" v-model="email">
                 </div>
                 <div class="body_login_item">
                     <v-icon>
@@ -184,5 +184,10 @@ export default {
     }
     .footer_login .button_login{
         color: green;
+    }
+    @media screen and (max-width: 700px) {
+        .footer_login{
+            width: auto;
+        }
     }
 </style>

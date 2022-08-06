@@ -1,7 +1,7 @@
 <template>
     <div>
         <header class="container_home">
-           <h1 class="title_home">
+           <h1 class="title_home" contenteditable="true">
               TITLE FOR SITE
             </h1>
         </header>
@@ -85,6 +85,7 @@ html{
     letter-spacing: 1.1rem;
     font-weight: normal;
     user-select: none;
+    outline: none;
   }
   .main_header{
     min-height: 100vh;

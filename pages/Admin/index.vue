@@ -24,7 +24,8 @@
         </div>
 
             <AdminAddpost />
-            
+            <br>
+            <AdminDetailes />
     </div>
 </template>
 

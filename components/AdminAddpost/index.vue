@@ -6,8 +6,11 @@
 
         <div class="box_add_post">
             <input type="text" placeholder="Title Post" v-model="title" class="item_add_post">
+            
             <textarea cols="30" rows="10" placeholder="Subtitle for post" v-model="subtitle" class="item_add_post"></textarea>
-            <input type="text" placeholder="url for post" v-model="src" class="item_add_post">
+            <small>{{subtitle.length}}</small>
+
+            <input type="text"  inputmode="url"  v-model="src" class="item_add_post">
 
             <div class="btn_add_post_admin">
                 <v-btn @click="addpostadmin">
