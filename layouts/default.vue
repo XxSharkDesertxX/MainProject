@@ -22,7 +22,7 @@ export default {
     this.loader= true
   },
   mounted() {
-    this.loader = false
+    this.loader =false
   },
 }
 </script>

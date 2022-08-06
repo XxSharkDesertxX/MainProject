@@ -1,9 +1,11 @@
 <template>
     <div>
         <header class="container_home">
-           <h1 class="title_home" contenteditable="true">
-              TITLE FOR SITE
-            </h1>
+           <svg>
+              <text x="18%" y="65%">
+                  TITLE FOR SITE
+              </text>
+           </svg>
         </header>
 
         <main class="main_header">
@@ -76,16 +78,20 @@ html{
     background-size: 100% 100%;
     display: flex;
     justify-content: center;align-items: center;
+    position: relative;
   }
   .title_home{
     font-size: 3.8rem;
     color: #fff;
-    filter: drop-shadow(0px 2px 20px black);
+    filter: drop-shadow(0px 2px 20px #fff);
     background-blend-mode: darken;
     letter-spacing: 1.1rem;
     font-weight: normal;
     user-select: none;
     outline: none;
+  }
+  .container_home img{
+    width: 100%; height: 100%;
   }
   .main_header{
     min-height: 100vh;
@@ -114,6 +120,30 @@ html{
     color: #fff;
     cursor: pointer;  
   }
+.container_home svg{
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex; justify-content: center; align-items: center;
+}
+.container_home  svg text{
+    stroke: white;
+    filter: drop-shadow(1px 10px 15px #fff);
+    stroke-width: 1.5px;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    fill: transparent;
+    animation: fade 10s infinite linear  alternate;
+    user-select: none;
+    margin: 0 auto;
+}
+@keyframes fade{
+    from{stroke-dasharray: 10% 8%;}
+    to{
+        stroke-dasharray: 20% 0;
+        stroke-dashoffset: 80%;
+    }
+  }
 
 
    @media screen and (max-width:700px) {
@@ -136,6 +166,25 @@ html{
         font-size: 4rem;
         margin: 0 2rem;
       }
+      .container_home  svg text{
+    stroke: white;
+    filter: drop-shadow(1px 10px 15px #fff);
+    stroke-width: 3px;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    fill: transparent;
+    animation: fade 5s infinite linear  alternate;
+    user-select: none;
+    position: absolute;
+    right: 5rem;
+}
+.container_home svg{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex; justify-content: center; align-items: center;
+}
+
     }
 
 

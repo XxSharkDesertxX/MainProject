@@ -24,6 +24,9 @@
           {
             src: `${require(`@/static/image_logo/4.jpg`)}`,
           },
+          {
+            src: `${require(`@/static/video/one.gif`)}`,
+          },
         ],
       }
     },
