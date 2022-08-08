@@ -6,6 +6,16 @@
                   TITLE FOR SITE
               </text>
            </svg>
+           <div class="righ_arrow arrowstyle">
+              <v-icon @click="rightside">
+                mdi-chevron-right
+              </v-icon>
+           </div>
+            <div class="left_arrow arrowstyle">
+              <v-icon @click="rightside">
+                mdi-chevron-left
+              </v-icon>
+           </div>
         </header>
 
         <main class="main_header">
@@ -47,7 +57,8 @@ export default {
         titleone:"Somting one",
         subtitleone:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatem quisquam dolorem, error id, aliquam molestias hic est officiis aspernatur necessitatibus modi libero accusantium placeat ad quod in minima? Quia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa pariatur voluptate qui exercitationem! Sint tempore reprehenderit aspernatur dolor nihil possimus a consectetur nulla! Obcaecati, cupiditate eos illum eius asperiores fuga.",
 
-        titletow:"Title Tow:"
+        titletow:"Title Tow:",
+        item:0
 
       }
     },
@@ -62,7 +73,56 @@ export default {
     }
   },
 
+  methods: {
+    rightside(){
+         let data = document.querySelector('.container_home');
+          let one = 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60';
+      let tow = 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'
+      let three ='https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60';
 
+      if (this.item ==0) {
+        data.style.backgroundImage=`url(${one})`
+        data.style.animation=' headeranime 1s  alternate ';
+        this.item =1;
+      }else if (this.item ==1) {
+        data.style.backgroundImage=`url(${tow})`
+        data.style.animation=' headeranimetow 1s  alternate ';
+        this.item =2;
+      }else if (this.item ==2) {
+        data.style.backgroundImage=`url(${three})`
+        data.style.animation=' headeranimethree 1s  alternate ';
+        this.item =0;
+      }
+
+    },
+    left_arrow(){
+          let data = document.querySelector('.container_home');
+          let one = 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60';
+      let tow = 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'
+      let three ='https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60';
+
+      if (this.item ==0) {
+        data.style.backgroundImage=`url(${one})`
+        data.style.animation=' headeranimethree 1s  alternate ';
+        this.item =1;
+      }else if (this.item ==1) {
+        data.style.backgroundImage=`url(${tow})`
+        data.style.animation=' headeranimetow 1s  alternate ';
+        this.item =2;
+      }else if (this.item ==2) {
+        data.style.backgroundImage=`url(${three})`
+        data.style.animation=' headeranime 1s  alternate ';
+        this.item =0;
+      }
+    }
+  },
+
+  // mounted() {
+  //   setInterval(() => {
+  //       this.cahngebg()
+  //   }, 1000);
+  // },
+  
 
 }
 </script>
@@ -79,6 +139,47 @@ html{
     display: flex;
     justify-content: center;align-items: center;
     position: relative;
+  } 
+  @keyframes headeranime {
+    from{
+      opacity: .2;
+      transform: scale(1.2);
+      }to{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+    @keyframes headeranimetow {
+    from{
+      opacity: .2;
+      transform: scale(1.2);
+      }to{
+    opacity: 1; 
+      transform: scale(1);
+    }
+  }
+   @keyframes headeranimethree {
+    from{
+      opacity: .2;
+      transform: scale(1.2);
+      }to{
+    opacity: 1; 
+      transform: scale(1);
+    }
+  }
+  .arrowstyle{
+    background: rgba(255, 255, 255,.5);
+    padding: .5rem;
+    border-radius: 50%;
+  }
+  .righ_arrow{
+    position: absolute;
+    top: 50%; left: .5rem;
+  }
+  .left_arrow{
+    position: absolute;
+    top: 50%;
+    right: .5rem;
   }
   .title_home{
     font-size: 3.8rem;
@@ -140,7 +241,7 @@ html{
 @keyframes fade{
     from{stroke-dasharray: 10% 8%;}
     to{
-        stroke-dasharray: 20% 0;
+        stroke-dasharray: 30% 0;
         stroke-dashoffset: 80%;
     }
   }

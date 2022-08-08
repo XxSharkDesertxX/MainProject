@@ -14,10 +14,14 @@
 
             <div class="btn_add_post_admin">
                 <v-btn @click="addpostadmin">
-                    Add
+                    <v-icon>
+                        mdi-plus-box-multiple
+                    </v-icon>
                 </v-btn>
                 <v-btn @click="rewirte">
-                    Rewrite
+                    <v-icon>
+                        mdi-autorenew
+                    </v-icon>
                 </v-btn>
             </div>
 
@@ -80,6 +84,10 @@ export default {
     .box_add_post{
         display: flex; justify-content: space-around; align-items: flex-start;
         flex-direction: column;
+    }
+    .btn_add_post_admin{
+        width: 100%;
+        display: flex; justify-content: space-around;
     }
     .item_add_post{
         outline: none;

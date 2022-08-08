@@ -6,8 +6,10 @@
                         <img :src="img" alt="image">
                     </div>
                     <h3>{{id}}</h3>
-                    <v-btn @click="removeitem">
-                        remove
+                    <v-btn @click="removeitem" @mouseenter="icon_remove='mdi-delete-empty'" @mouseleave="icon_remove='mdi-delete'">
+                        <v-icon>
+                            {{icon_remove}}
+                        </v-icon>
                     </v-btn>
             </div>
     </div>
@@ -21,6 +23,11 @@ export default {
         'title',
         'id'
     ],
+    data() {
+        return {
+            icon_remove:'mdi-delete'
+        }
+    },
     methods: {
         ...mapActions([
             'remove'
@@ -34,7 +41,7 @@ export default {
             } else {
                 return
             }
-        }
+        },
     },
 }
 </script>

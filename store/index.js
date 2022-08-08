@@ -1,6 +1,6 @@
 import Vuex from 'vuex';
-import data from '@/data/index.js';
-import user from '@/data/users.js';
+import data from '~/layouts/data/index.js';
+import user from '~/layouts/data/users.js';
 
 export default()=>{
     return new Vuex.Store({

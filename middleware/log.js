@@ -1,4 +1,4 @@
-import  user from '@/data/users';
+import  user from '~/layouts/data/users';
 
 export default function ({ store, redirect }) {
 
