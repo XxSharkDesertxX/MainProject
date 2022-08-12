@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container_header">
+        <div class="container_header" @mousemove="mosepoinser()">
 
 
 
@@ -17,9 +17,9 @@
             <li>
                 <nuxt-link to="/About" class="nxt_link_header">About</nuxt-link>
             </li>   
+
+        <div class="pointer"></div>
         </ul>
-
-
        
 
         <div class="logo_header">
@@ -65,6 +65,13 @@ export default {
                 data.style.width="0%"
                 this.istrue = true
             }
+        },
+        mosepoinser(){
+            let pointer = document.querySelector(".pointer");
+            document.addEventListener("mousemove",function (e) {
+                pointer.style.left = e.pageX +'px';
+                pointer.style.top = e.pageY +'px'
+            })
         }
     },
 }
@@ -119,6 +126,18 @@ export default {
     }
     .icon_mnue_bar{
         display: none;
+    }
+    .pointer{
+        width: 15px; height: 15px;
+        background-color: #fff;
+        position: fixed;
+        border-radius: 50%;
+        mix-blend-mode: difference;
+        pointer-events: none;
+        transition: all .2s;
+    }
+    .mnue_container li:hover ~ .pointer{
+        transform: scale(3);
     }
 
     @media screen and (max-width:700px) {
